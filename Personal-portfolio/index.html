@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio Website - Easy Tutorials</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
     <style>
         /* Add basic styling for the tabs */
@@ -34,7 +34,7 @@
 <div id="header">
     <div class="container">
         <nav>
-            <img src="images/logo.png" class="logo">
+            <img src="./images/logo.png" class="logo" alt="Logo">
             <ul id="sidemenu">
                 <li><a href="#header">Home</a></li>
                 <li><a href="#about">About</a></li>
@@ -57,7 +57,7 @@
     <div class="container">
         <div class="row">
             <div class="about-col-1">
-                <img src="images/user.jpg">
+                <img src="./images/user.jpg" alt="User Image">
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
@@ -121,7 +121,7 @@
         <h1 class="sub-title">My Work</h1>
         <div class="work-list">
             <div class="work">
-                <img src="images/work-1.jpg" alt="Food Ordering System">
+                <img src="./images/work-1.jpg" alt="Food Ordering System">
                 <div class="layer">
                     <h3>Online Food Ordering System</h3>
                     <p>Created a Java GUI for managing food orders with a MySQL backend, enabling customers to browse, order, and track their orders. Available on GitHub.</p>
@@ -129,7 +129,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="images/work-2.jpg" alt="Loan Prediction System">
+                <img src="./images/work-2.jpg" alt="Loan Prediction System">
                 <div class="layer">
                     <h3>Loan Default Prediction System</h3>
                     <p>Developed a machine learning model using Python to predict loan default risks, focusing on data cleaning and accuracy. Check it out on GitHub.</p>
@@ -137,7 +137,7 @@
                 </div>
             </div>
             <div class="work">
-                <img src="images/work-3.jpg" alt="Weather Dashboard">
+                <img src="./images/work-3.jpg" alt="Weather Dashboard">
                 <div class="layer">
                     <h3>Weather Dashboard</h3>
                     <p>Built a React-based dashboard using OpenWeatherMap API, showing current weather and forecasts with an interactive, responsive design. View it on GitHub.</p>
@@ -163,7 +163,7 @@
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-linkedin"></i></a>
                 </div>
-                <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
+                <a href="./images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet" method="POST" action="https://script.google.com/macros/s/AKfycbwzA_zQoE1DqweQ2pTmBmrh8eZXFMVQvh5XqhuITDiaD75-K0iZ6BjgD1XE6nx0i_a4/exec">
@@ -182,23 +182,22 @@
         let tablinks = document.querySelectorAll('.tab-links');
         let tabcontents = document.querySelectorAll('.tab-contents');
 
-        // Remove the active-link and active-tab classes
         tablinks.forEach(link => link.classList.remove('active-link'));
         tabcontents.forEach(content => content.classList.remove('active-tab'));
 
-        // Add the active-link class to the clicked tab and the active-tab class to the corresponding content
-        event.target.classList.add('active-link');
+        event.currentTarget.classList.add('active-link');
         document.getElementById(tabname).classList.add('active-tab');
     }
 
+    let sidemenu = document.getElementById("sidemenu");
+
     function openmenu() {
-        document.getElementById('sidemenu').style.right = '0';
+        sidemenu.style.right = "0";
     }
 
     function closemenu() {
-        document.getElementById('sidemenu').style.right = '-200px';
+        sidemenu.style.right = "-200px";
     }
 </script>
-
 </body>
 </html>
