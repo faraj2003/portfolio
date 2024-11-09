@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Website - Easy Tutorials</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo.png" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#co-curricular">Co-Curricular</a></li> <!-- Link for Co-Curricular -->
+                <li><a href="#extra-curricular">Extra-Curricular</a></li> <!-- Link for Extra-Curricular -->
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fas fa-times" onclick="closemenu()"></i>
+            </ul>
+            <i class="fas fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <p>Aspiring Data Science Professional | Web Developer</p>
+            <h1>Hi, I'm <span>Faraj</span><br>From India</h1>
+        </div>
+    </div>
+</div>
+
+<!-- ----------- About ---------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/aboutphoto.jpg">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I’m a Computer Science student with a strong interest in data science and a solid background in web development using the MERN stack. I’m passionate about analyzing data, uncovering insights, and applying machine learning to solve practical problems. My technical projects showcase both my programming skills and my commitment to creating meaningful, data-driven solutions.
+
+Currently, I’m building my portfolio with projects that blend data analysis with web technologies, aiming to launch a career where I can make an impact through data science. Outside of coding, I enjoy traveling and discovering new cultures, which fuels my creativity and curiosity.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Web Development</span><br>Proficient in the MERN stack (MongoDB, Express.js, React, Node.js), building responsive and user-friendly web applications.</li>
+                        <li><span>Data Science</span><br>Skilled in data analysis, machine learning, and statistical modeling, with hands-on experience in transforming data into actionable insights.</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023 - Current</span><br>Freelance Web and Data Science Developer</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2022</span><br>Class XII, CBSE Board, Kendriya Vidyalaya ONGC, Panvel</li>
+                        <li><span>2026,Expected</span><br>B.Tech in Computer Science, Symbiosis Institute of Technology, Pune</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ----------- Co-Curricular ---------- -->
+<div id="co-curricular">
+    <div class="container">
+        <h1 class="sub-title">Co-Curricular Activities</h1>
+        <p>In addition to my academic and professional endeavors, I actively engage in co-curricular activities that contribute to my personal growth. Here are some highlights:</p>
+        <ul>
+            <li><span>2023</span><br>Attended Web Development Workshop</li>
+            <li><span>2019</span><br>Participated in Quiz Competition</li>
+        </ul>
+    </div>
+</div>
+
+<!-- ----------- Extra-Curricular ---------- -->
+<div id="extra-curricular">
+    <div class="container">
+        <h1 class="sub-title">Extra-Curricular Activities</h1>
+        <p>In my free time, I enjoy participating in extra-curricular activities that enhance my creativity and leadership skills. Below are some of my interests:</p>
+        <ul>
+            <li><span>July 2024 - November 2024</span><br>Volunteer at Local NGO</li>
+            <li><span>2017 - 2020</span><br>Member, Football Team (Local League)</li>
+            <li><span>2018 - 2019</span><br>Volunteer at community clean-up initiatives</li>
+        </ul>
+    </div>
+</div>
+
+<!-- --------- Services ---------------- -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Development</h2>
+                <p>I build responsive, user-friendly websites and web applications using the MERN stack (MongoDB, Express, React, Node.js). Whether you need a simple landing page or a full-fledged web application, I create solutions that are optimized for performance and usability.</p>
+                
+            </div>
+            <div>
+                <i class="fas fa-crop-alt"></i>
+                <h2>Data Analysis</h2>
+                <p>I offer data analysis services to help you make data-driven decisions. With a focus on data cleaning, visualization, and statistical analysis, I can transform raw data into actionable insights tailored to your needs.</p>
+                
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>Machine Learning Models</h2>
+                <p>I develop and fine-tune machine learning models that can be applied to a variety of use cases, from predicting trends to enhancing decision-making. My approach emphasizes accuracy and relevance to your specific goals.</p>
+                
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------- Portfolio ------------ -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/food.jpg">
+                <div class="layer">
+                    <h3>Online Food Ordering System</h3>
+                    <p>Created a Java GUI for managing food orders with a MySQL backend, enabling customers to browse, order, and track their orders. Available on GitHub.</p>
+                    <a href="https://github.com/faraj2003/farajcoder"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/loan.jpg">
+                <div class="layer">
+                    <h3>Loan Default Prediction System</h3>
+                    <p>Developed a machine learning model using Python to predict loan default risks, focusing on data cleaning and accuracy. Check it out on GitHub.</p>
+                    <a href="https://github.com/faraj2003/farajcoder"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/weather.jpg">
+                <div class="layer">
+                    <h3>Weather Dashboard</h3>
+                    <p>Built a React-based dashboard using OpenWeatherMap API, showing current weather and forecasts with an interactive, responsive design. View it on GitHub.</p>
+
+                    <a href="https://github.com/faraj2003/farajcoder"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<!-- ---------- Contact ------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-paper-plane"></i>farajislamx@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>7021429788</p>
+                <div class="social-icons">
+                    <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                    <a href="https://linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+                    <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="contact-right">
+                <form action="submit_form.php" method="post">
+                    <input type="text" name="name" placeholder="Your Name" required>
+                    <input type="email" name="email" placeholder="Your Email" required>
+                    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
