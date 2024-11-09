@@ -29,6 +29,7 @@
         </div>
     </div>
 </div>
+
 <!-- -----------about---------- -->
 <div id="about">
     <div class="container">
@@ -67,6 +68,7 @@
         </div>
     </div>
 </div>
+
 <!-- ---------services---------------- -->
 <div id="services">
     <div class="container">
@@ -87,10 +89,10 @@
                 <h2>Machine Learning Models</h2>
                 <p>I develop and fine-tune machine learning models that can be applied to a variety of use cases, from predicting trends to enhancing decision-making. My approach emphasizes accuracy and relevance to your specific goals.</p>
             </div>
-
         </div>
     </div>
 </div>
+
 <!-- ----------portfolio------------ -->
 <div id="portfolio">
     <div class="container">
@@ -118,13 +120,13 @@
                     <h3>Weather Dashboard</h3>
                     <p>Built a React-based dashboard using OpenWeatherMap API, showing current weather and forecasts with an interactive, responsive design. View it on GitHub.</p>
                     <a href="https://github.com/faraj2003/farajcoder" target="_blank"><i class="fas fa-external-link-alt"></i></a>
-
                 </div>
             </div>
         </div>
         <a href="#" class="btn">See more</a>
     </div>
 </div>
+
 <!-- ----------contact------------- -->
 <div id="contact">
     <div class="container">
@@ -160,22 +162,27 @@
     var tabcontents = document.getElementsByClassName("tab-contents");
 
     function opentab(tabname) {
-        for (tablink of tablinks) {
+        // Remove active-link and active-tab from all tabs
+        Array.from(tablinks).forEach(function(tablink) {
             tablink.classList.remove("active-link");
-        }
-        for (tabcontent of tabcontents) {
+        });
+        Array.from(tabcontents).forEach(function(tabcontent) {
             tabcontent.classList.remove("active-tab");
-        }
+        });
+
+        // Add active-link to clicked tab and active-tab to the corresponding content
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
     }
 
     function openmenu() {
-        document.getElementById("sidemenu").style.width = "250px";
+        document.getElementById("sidemenu").style.right = "0";
     }
+
     function closemenu() {
-        document.getElementById("sidemenu").style.width = "0";
+        document.getElementById("sidemenu").style.right = "-200px";
     }
 </script>
+
 </body>
 </html>
