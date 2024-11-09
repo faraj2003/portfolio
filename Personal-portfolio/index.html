@@ -7,6 +7,28 @@
     <title>Personal Portfolio Website - Easy Tutorials</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+    <style>
+        /* Add basic styling for the tabs */
+        .tab-links {
+            cursor: pointer;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            margin-right: 10px;
+        }
+
+        .active-link {
+            background: #007bff;
+            color: white;
+        }
+
+        .tab-contents {
+            display: none;
+        }
+
+        .active-tab {
+            display: block;
+        }
+    </style>
 </head>
 <body>
 <div id="header">
@@ -42,9 +64,9 @@
                 <p>I am a passionate software developer with experience in full-stack development, primarily using the MERN stack. I have worked on a variety of projects, including web and mobile apps, and I'm constantly looking to learn new technologies and enhance my skills. I am currently focused on developing my portfolio to showcase my work and skills.</p>
 
                 <div class="tab-titles">
-                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links active-link" onclick="opentab(event, 'skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab(event, 'experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab(event, 'education')">Education</p>
                 </div>
                 <div class="tab-contents active-tab" id="skills">
                     <ul>
@@ -144,43 +166,37 @@
                 <a href="images/my-cv.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                
+                <form name="submit-to-google-sheet" method="POST" action="https://script.google.com/macros/s/AKfycbwzA_zQoE1DqweQ2pTmBmrh8eZXFMVQvh5XqhuITDiaD75-K0iZ6BjgD1XE6nx0i_a4/exec">
                     <input type="text" name="Name" placeholder="Your Name" required>
                     <input type="email" name="Email" placeholder="Your Email" required>
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
+                    <button type="submit" class="btn">Send</button>
                 </form>
-                <span id="msg"></span>
             </div>
         </div>
     </div>
-    <div class=""></div>
 </div>
 
 <script>
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(event, tabname) {
+        let tablinks = document.querySelectorAll('.tab-links');
+        let tabcontents = document.querySelectorAll('.tab-contents');
 
-    function opentab(tabname) {
-        // Remove active-link and active-tab from all tabs
-        Array.from(tablinks).forEach(function(tablink) {
-            tablink.classList.remove("active-link");
-        });
-        Array.from(tabcontents).forEach(function(tabcontent) {
-            tabcontent.classList.remove("active-tab");
-        });
+        // Remove the active-link and active-tab classes
+        tablinks.forEach(link => link.classList.remove('active-link'));
+        tabcontents.forEach(content => content.classList.remove('active-tab'));
 
-        // Add active-link to clicked tab and active-tab to the corresponding content
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
+        // Add the active-link class to the clicked tab and the active-tab class to the corresponding content
+        event.target.classList.add('active-link');
+        document.getElementById(tabname).classList.add('active-tab');
     }
 
     function openmenu() {
-        document.getElementById("sidemenu").style.right = "0";
+        document.getElementById('sidemenu').style.right = '0';
     }
 
     function closemenu() {
-        document.getElementById("sidemenu").style.right = "-200px";
+        document.getElementById('sidemenu').style.right = '-200px';
     }
 </script>
 
