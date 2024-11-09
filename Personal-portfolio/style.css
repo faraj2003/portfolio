@@ -14,7 +14,7 @@ body{
 #header{
     width: 100%;
     height: 80vh;  /* Increased height to accommodate a larger image */
-    background-image: url("https://raw.githubusercontent.com/faraj2003/farajcoder/refs/heads/main/WhatsApp%20Image%202024-11-09%20at%2014.11.56_1d7e2c4a-Photoroom.png");
+    background-image: url(https://raw.githubusercontent.com/faraj2003/farajcoder/refs/heads/main/WhatsApp%20Image%202024-11-09%20at%2014.11.56_1d7e2c4a-Photoroom.png);
     background-size: auto 80%;  /* Increase the size of the image (80% of the container's height) */
     background-position: right center;  /* Position the image to the right */
     background-attachment: fixed;
